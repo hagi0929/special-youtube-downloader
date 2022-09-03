@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Special Youtube Downloader",
+  "version": "0.1",
+  "description": "special youtube downloader made by jaehak",
+  "permissions": [
+    "clipboardRead",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/icon.png",
+      "24": "assets/icon.png",
+      "32": "assets/icon.png"
+    },
+    "default_title": "Special Youtube Downloader",
+    "default_popup": "popup.html"
+  }
+}
